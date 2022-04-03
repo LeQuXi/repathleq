@@ -15,19 +15,21 @@ class HomeScreeen extends StatefulWidget {
   @override
   _HomeScreeenState createState() => _HomeScreeenState();
 }
+
 class _HomeScreeenState extends State<HomeScreeen> {
   @override
   Widget build(BuildContext context) {
     final appbloc = Provider.of<ApplicationBloc>(context);
 
     final Marker _kGooglePlex = Marker(
-        markerId: MarkerId('_kGoogle'),
-        infoWindow: InfoWindow(title:'check marker'),
-        icon: BitmapDescriptor.defaultMarker,
-        position:  LatLng(37.42796133580664, -122.085749655962),
+      markerId: MarkerId('_kGoogle'),
+      infoWindow: InfoWindow(title: 'check marker'),
+      icon: BitmapDescriptor.defaultMarker,
+      position: LatLng(37.42796133580664, -122.085749655962),
     );
 
     return Scaffold(
+      extendBodyBehindAppBar: true,
       appBar: AppBar(
           title: Text("Repath"),
           titleTextStyle: TextStyle(
@@ -35,7 +37,8 @@ class _HomeScreeenState extends State<HomeScreeen> {
               fontSize: 24.0,
               fontFamily: 'kung-fu-master-font',
               fontWeight: FontWeight.w100),
-          backgroundColor: Color.fromARGB(255, 74, 120, 158),
+          backgroundColor: Colors.transparent,
+          elevation: 0,
           leading: Padding(
             padding: EdgeInsets.only(left: 12),
             child: IconButton(
@@ -111,7 +114,7 @@ class _HomeScreeenState extends State<HomeScreeen> {
                   height: 725,
                   child: GoogleMap(
                     mapType: MapType.normal,
-                    markers:{_kGooglePlex},
+                    markers: {_kGooglePlex},
                     myLocationEnabled: true,
                     initialCameraPosition: CameraPosition(
                         target: LatLng(appbloc.currentLocation.latitude,
