@@ -6,18 +6,13 @@ class ApplicationBloc with ChangeNotifier {
   final geoloctorService = GeoloctorService();
 
 // variable
-  Position currentLocation ;
-
+  Position currentLocation;
 
   ApplicationBloc() {
     setCurrentLocation();
   }
 
-
-
-
   setCurrentLocation() async {
-
     currentLocation = await geoloctorService.getCurrentLocation();
     notifyListeners();
   }
