@@ -5,6 +5,7 @@ import 'package:geocoding/geocoding.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:provider/provider.dart';
 import 'package:untitled/blocks/app_block.dart';
+import 'package:untitled/loginSupport.dart';
 import 'package:untitled/src/screens/home_screen.dart';
 import 'login.dart';
 import 'registration.dart';
@@ -74,9 +75,19 @@ class _SplashScreenState extends State<SplashScreen> {
           children: [
             // logo here
             Image.asset(
-              'assets/logo/187.png',
-              height: 120,
+              'assets/image/martolodmap1.png',
+              height: 400,
+              width: 300,
+              semanticLabel: "Repath",
             ),
+            Text(
+              "Repath",
+              style: TextStyle(
+                  fontSize: 24,
+                  fontFamily: 'Times New Roman',
+                  fontWeight: FontWeight.w500),
+            ),
+
             SizedBox(
               height: 20,
             ),

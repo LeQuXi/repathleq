@@ -92,6 +92,7 @@ flutter:
     - assets/image/repath.jpg
     - assets/image/fastforward.png
     - assets/logo/187.png
+    - assets/image/martolodmap1.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
