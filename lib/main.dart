@@ -33,8 +33,8 @@ class MyApp extends StatelessWidget {
           visualDensity: VisualDensity.adaptivePlatformDensity,
         ),
         routes: <String, WidgetBuilder>{
-          '/login': (BuildContext context) => new LoginDemo(),
-          '/register': (BuildContext context) => new Registration(),
+          '/login': (BuildContext context) => new Login(),
+          '/register': (BuildContext context) => new Register(),
           '/pro': (BuildContext context) => new DebugUiPage()
         },
         home: HomeScreeen(),
