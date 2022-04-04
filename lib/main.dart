@@ -83,7 +83,7 @@ class _SplashScreenState extends State<SplashScreen> {
             Text(
               "Repath",
               style: TextStyle(
-                  fontSize: 24,
+                  fontSize: 20,
                   fontFamily: 'Times New Roman',
                   fontWeight: FontWeight.w500),
             ),

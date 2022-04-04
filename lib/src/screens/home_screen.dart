@@ -106,13 +106,13 @@ class _HomeScreeenState extends State<HomeScreeen> {
         backgroundColor: Color.fromARGB(255, 199, 221, 199),
         body: Stack(children: <Widget>[
           GoogleMap(
+              myLocationEnabled: true,
               initialCameraPosition:
                   CameraPosition(target: _IntialPosition, zoom: 10),
               zoomControlsEnabled: true,
               mapType: MapType.normal,
               myLocationButtonEnabled: false,
               onMapCreated: _onMapCreated,
-              myLocationEnabled: true,
               markers: {_kGooglePlex}),
         ]));
   }
